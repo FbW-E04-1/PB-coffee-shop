@@ -3,7 +3,7 @@
 Write a **class** called **CoffeeShop**, which has **three instance variables**:
 
 1.  **name** : a string (basically, of the shop)
-2.  **menu** : an array of items (of object type), with each item containing the **item** (name of the item), **type** (whether _food_ or a _drink_) and **price**.
+2.  **menu** : an array of items (of object type), with each item containing the **name** (name of the item), **type** (whether _food_ or a _drink_) and **price**.
 3.  **orders** : an empty array
 
 and **seven methods**:
