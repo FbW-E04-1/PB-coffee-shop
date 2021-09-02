@@ -22,32 +22,69 @@ and **seven methods**:
 ### Examples
 
 ```
-tcs.addOrder("hot cocoa") ➞ "This item is currently unavailable!"
-// Tesha's coffee shop does not sell hot cocoa
-tcs.addOrder("iced tea") ➞ "This item is currently unavailable!"
-// specifying the variant of "iced tea" will help the process
+let menu = [
+  {
+    name: "Coffee",
+    type: "drink",
+    price: 1.59,
+  },
+  {
+    name: "Sandwich",
+    type: "food",
+    price: 4.99,
+  },
+  {
+    name: "Donut",
+    type: "food",
+    price: 2.59,
+  },
+  {
+    name: "Coke",
+    type: "drink",
+    price: 1.99,
+  },
+  {
+    name: "Lemonade",
+    type: "drink",
+    price: 1.99,
+  },
+  {
+    name: "Toast",
+    type: "food",
+    price: 3.99,
+  },
+  {
+    name: "Cinnamon roll",
+    type: "food",
+    price: 3.99,
+  },
+  {
+    name: "Iced coffee",
+    type: "drink",
+    price: 3.99,
+  },
+];
 
-tcs.addOrder("cinnamon roll") ➞  "Order added!"
-tcs.addOrder("iced coffee") ➞ "Order added!"
-tcs.listOrders ➞ ["cinnamon roll", "iced coffee"]
-// the list of all the items in the current order
+let tcs = new CoffeeShop("Coffee Place", menu, []);
 
-tcs.dueAmount() ➞ 2.17
 
-tcs.fulfillOrder() ➞ "The cinnamon roll is ready!"
-tcs.fulfillOrder() ➞ "The iced coffee is ready!"
-tcs.fulfillOrder() ➞ "All orders have been fulfilled!"
-// all orders have been presumably served
+console.log(tcs.addOrder("hot cocoa")); 
+console.log(tcs.addOrder("iced tea")); 
 
-tcs.listOrders() ➞ []
-// an empty array is returned if all orders have been exhausted
+console.log(tcs.addOrder("Cinnamon roll")); 
+console.log(tcs.addOrder("Iced coffee")); 
+console.log(tcs.listOrders()); 
 
-tcs.dueAmount() ➞ 0.0
-// no new orders taken, expect a zero payable
+console.log(tcs.dueAmount()); 
+console.log(tcs.fulfillOrder()); 
+console.log(tcs.fulfillOrder()); 
+console.log(tcs.fulfillOrder()); 
+console.log(tcs.listOrders()); 
+console.log(tcs.dueAmount()); 
 
-tcs.cheapestItem() ➞ "lemonade"
-tcs.drinksOnly() ➞ ["orange juice", "lemonade", "cranberry juice", "pineapple juice", "lemon iced tea", "vanilla chai latte", "hot chocolate", "iced coffee"]
-tcs.foodOnly() ➞ ["tuna sandwich", "ham and cheese sandwich", "bacon and egg", "steak", "hamburger", "cinnamon roll"]
+console.log(tcs.cheapestItem()); 
+console.log(tcs.drinksOnly()); 
+console.log(tcs.foodOnly()); 
 ```
 
 ### Notes
